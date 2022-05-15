@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7803E1A4-BD0E-4837-97E1-E24044BF22E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PrototypePOSSystemV2.My.MyApplication</StartupObject>
+    <RootNamespace>PrototypePOSSystemV2</RootNamespace>
+    <AssemblyName>PrototypePOSSystemV2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PrototypePOSSystemV2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PrototypePOSSystemV2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CrownLogoNoText.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database_POSSystemDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database_POSSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database_POSSystemDataSet.vb">
+      <DependentUpon>Database_POSSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AddProductByID.Designer.vb">
+      <DependentUpon>Form_AddProductByID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_AddProductByID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_EditCustomers.Designer.vb">
+      <DependentUpon>Form_EditCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_EditCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_EditInventory.Designer.vb">
+      <DependentUpon>Form_EditInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_EditInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_EditStaff.Designer.vb">
+      <DependentUpon>Form_EditStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_EditStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_InventoryManagement.Designer.vb">
+      <DependentUpon>Form_InventoryManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_InventoryManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_MainMenu.Designer.vb">
+      <DependentUpon>Form_MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ModifyMenu.Designer.vb">
+      <DependentUpon>Form_ModifyMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ModifyMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_PayrollManagement.Designer.vb">
+      <DependentUpon>Form_PayrollManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_PayrollManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_POSSystem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_POSSystem.Designer.vb">
+      <DependentUpon>Form_POSSystem.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_SelectCustomer.Designer.vb">
+      <DependentUpon>Form_SelectCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_SelectCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_SelectTable.Designer.vb">
+      <DependentUpon>Form_SelectTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_SelectTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_SignIn.Designer.vb">
+      <DependentUpon>Form_SignIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_SignIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_SplashScreen.Designer.vb">
+      <DependentUpon>Form_SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_StaffManagement.Designer.vb">
+      <DependentUpon>Form_StaffManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_StaffManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewCustomers.Designer.vb">
+      <DependentUpon>Form_ViewCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewInventory.Designer.vb">
+      <DependentUpon>Form_ViewInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewOrders.Designer.vb">
+      <DependentUpon>Form_ViewOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewOrders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewReciept.Designer.vb">
+      <DependentUpon>Form_ViewReciept.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewReciept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewStaff.Designer.vb">
+      <DependentUpon>Form_ViewStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewTransactions.Designer.vb">
+      <DependentUpon>Form_ViewTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Class_AddBurgers.vb" />
+    <Compile Include="Classes\Class_AddDesserts.vb" />
+    <Compile Include="Classes\Class_AddDrinks.vb" />
+    <Compile Include="Classes\Class_AddKids.vb" />
+    <Compile Include="Classes\Class_AddSalads.vb" />
+    <Compile Include="Classes\Class_AddSides.vb" />
+    <Compile Include="Classes\Class_AddSpecials.vb" />
+    <Compile Include="Classes\Class_AddStarters.vb" />
+    <Compile Include="Classes\Class_AddMains.vb" />
+    <Compile Include="Classes\Class_Utils.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AddProductByID.resx">
+      <DependentUpon>Form_AddProductByID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_EditCustomers.resx">
+      <DependentUpon>Form_EditCustomers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_EditInventory.resx">
+      <DependentUpon>Form_EditInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_EditStaff.resx">
+      <DependentUpon>Form_EditStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_InventoryManagement.resx">
+      <DependentUpon>Form_InventoryManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_MainMenu.resx">
+      <DependentUpon>Form_MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ModifyMenu.resx">
+      <DependentUpon>Form_ModifyMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_PayrollManagement.resx">
+      <DependentUpon>Form_PayrollManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_POSSystem.resx">
+      <DependentUpon>Form_POSSystem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_SelectCustomer.resx">
+      <DependentUpon>Form_SelectCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_SelectTable.resx">
+      <DependentUpon>Form_SelectTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_SignIn.resx">
+      <DependentUpon>Form_SignIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_SplashScreen.resx">
+      <DependentUpon>Form_SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_StaffManagement.resx">
+      <DependentUpon>Form_StaffManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewCustomers.resx">
+      <DependentUpon>Form_ViewCustomers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewInventory.resx">
+      <DependentUpon>Form_ViewInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewOrders.resx">
+      <DependentUpon>Form_ViewOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewReciept.resx">
+      <DependentUpon>Form_ViewReciept.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewStaff.resx">
+      <DependentUpon>Form_ViewStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewTransactions.resx">
+      <DependentUpon>Form_ViewTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database_POSSystemDataSet.xsc">
+      <DependentUpon>Database_POSSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database_POSSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database_POSSystemDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database_POSSystemDataSet.xss">
+      <DependentUpon>Database_POSSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CrownLogoNoText.ico" />
+    <Content Include="Database_POSSystem.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\CrownLogoNoText.ico" />
+    <None Include="Resources\CrownInnTitle5.png" />
+    <None Include="Resources\CrownInnTitle4.png" />
+    <None Include="Resources\CrownInnTitle3.png" />
+    <None Include="Resources\CrownInnTitle2.png" />
+    <None Include="Resources\CrownInnTitle.png" />
+    <None Include="Resources\CrownLogoNoText.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

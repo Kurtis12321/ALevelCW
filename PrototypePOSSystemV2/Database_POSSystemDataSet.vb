@@ -1,0 +1,5 @@
+﻿Partial Class Database_POSSystemDataSet
+End Class
+
+Namespace Database_POSSystemDataSetTableAdapters
+End Namespace
